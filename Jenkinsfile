@@ -8,9 +8,9 @@ pipeline {
         
         stage('Build and Test') {
             parallel {
-                stage('admin-server') {
+                stage('api-gateway') {
                     steps {
-                        dir('admin-server') {
+                        dir('api-gateway') {
                             sh 'mvn clean package'
                             // You can add more Maven-related build and test commands as needed
                         }
