@@ -23,9 +23,9 @@ pipeline {
                     }
                 }
 
-                stage('api-gateway') {
+                stage('service-one') {
                     steps {
-                        dir('api-gateway') {
+                        dir('service-one') {
                             sh 'mvn clean package'
                             // You can add more Maven-related build and test commands as needed
                         }
